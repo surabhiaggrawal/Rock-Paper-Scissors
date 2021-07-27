@@ -1,0 +1,73 @@
+$image_path : '../../assets/images';
+
+.playground{
+    margin: 80px 37% 30px;
+    width: 32%;
+    height: 284px;
+    background-image: url(#{$image_path}/bg-triangle.svg);
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 320px) and (max-width: 639px){
+        margin: 30% 18% 10%;
+        width: auto;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 240px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 1028px){
+        background-image: none;
+    }
+}
+
+.box-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px){
+        width: 66%;
+        left: 18%;
+        top: 39%;
+        position: absolute;
+    }
+
+    button{
+        &.paper{
+            margin-top: -20px;
+            margin-left: -30px;
+
+            @media screen and (max-width: 767px){
+                margin-top: 0;
+                margin-left: 0;
+            }
+        }
+        &.scissors{
+            margin-top: -20px;
+            margin-right: 32px;
+
+            @media screen and (max-width: 767px){
+                margin-top: 0;
+                margin-right: 0;
+            }
+        } 
+    }
+}
+
+.box-bottom{
+    margin-top: 32px;
+    button{
+        margin-left: 75px;
+    }
+
+    @media screen and (max-width: 767px){
+        position: absolute;
+        top: 56%;
+        left: 19%;  
+        button{
+            margin-left: 63px;
+        }
+    }
+
+}

@@ -1,0 +1,102 @@
+@import '../../assets/styles/color.scss';
+@import '../../assets/styles/font.scss';
+
+
+.score-board-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 40vw;
+    height: 16vh;
+    border: 2px solid $header-outline;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: $Barlow-semi;
+    font-weight: 700;
+
+    header{
+        width: 30%;
+        height: 12vh;
+        display: flex;
+        margin-top: 11px;
+        flex-wrap: wrap;
+        line-height: 26px;
+        span{
+            font-size: 32px;
+            flex-basis: 100%;
+            color: $text-white;
+            font-weight: 600;
+        }
+    }
+
+    @media screen and (max-width: 767px){
+        width: 81%;
+        padding: 13px;
+        height: 20%;
+        header{
+            margin-top: 0;
+
+            span{
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px){
+        width: auto;
+        padding: 13px;
+        height: 15vh;
+        header{
+            margin-top: 0;
+
+            span{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.score-card{
+    width: 5vw;
+    min-height: 71px;
+    height: 10vh;
+    background-color: $text-white;
+    padding: 5px 12px 13px;
+    border-radius: 3px;
+    text-align: center;
+
+    .score-header{
+        font-size: 13px;
+        color: $score-text;
+    }
+
+    .score{
+        font-size: 32px;
+        margin-top: 2px;
+        color: $dark-text;
+        font-weight: 700;
+    }
+
+    @media screen and (max-width: 767px){
+        width: 15vw;
+        padding: 5px 9px 13px;
+        min-height: 58px;
+        
+        .score-header{
+            font-size: 11px;
+        }
+        .score{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px){
+        width: 8vw;
+        min-height: 58px;
+
+        .score{
+            font-size: 20px;
+        }
+    }
+}

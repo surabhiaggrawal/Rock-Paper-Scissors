@@ -1,0 +1,21 @@
+@import '../../assets/styles/color.scss';
+@import '../../assets/styles/font.scss';
+
+.decision-ground-main{
+    color: $text-white;
+    width: 567px;
+    height: 100%;
+    display: flex;
+    padding: 40px;
+    margin: 0 auto;
+    min-height: 295px;
+    
+    button.regular{
+        width: 124px;  
+    }
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+        padding: 0;
+    }
+}

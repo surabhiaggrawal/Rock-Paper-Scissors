@@ -1,0 +1,69 @@
+@import '../../assets/styles/color.scss';
+
+.rps-button {
+    width: 150px;
+    height: 150px;
+    border: 2px solid $button-outline;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1028px){
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.rps-button.regular{
+    color: $text-white;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+
+    @media screen and (max-width: 767px){
+        font-size: 10px;
+        width: 76px;
+        height: 29px;
+    }
+}
+
+.rps-button.circular{
+    border-radius: 75px;
+    box-shadow: inset 0 8px $button-shadow;
+
+    @media screen and (max-width: 1028px){
+        border-radius: 80px;
+        box-shadow: inset 0 4px $button-shadow;
+        img{
+            width: 26px;
+        }
+    }
+}
+
+.rps-button.circular.scissors{
+    border: 20px solid $scissors-border;
+    &.active{
+        box-shadow: 0 0 98px 6px rgba(0, 0, 0, 0.2); 
+    }
+
+    @media screen and (max-width: 1028px){
+        border: 14px solid $scissors-border;
+    }
+}
+
+.rps-button.circular.rock{
+    border: 20px solid $rock-border;
+
+    @media screen and (max-width: 1028px){
+        border: 14px solid $rock-border;
+    }
+}
+
+.rps-button.circular.paper{
+    border: 20px solid $paper-border;
+
+    @media screen and (max-width: 1028px){
+        border: 14px solid $paper-border;
+    }
+}
+

@@ -1,0 +1,73 @@
+@import '../../assets/styles/color.scss';
+@import '../../assets/styles/font.scss';
+
+.tournament-picker-main{
+    color: $text-grey;
+    font-family: $Barlow-semi;
+    display: flex;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    height: 284px;
+    .tournament-heading{
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        color: $text-white;
+        text-transform: uppercase;
+    }
+    .card-container{
+        flex-basis: 100%;
+        display: flex;
+    }
+    .tournament-card{
+        cursor: pointer;
+        margin: 20px;
+        flex-basis: 22%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $text-white;
+        border-radius: 15px;
+        padding: 18px;
+    }
+    .tournament-max-score{
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        color: $dark-text;
+    }
+    
+    .tournament-desc{
+        padding: 0 35px;
+    }
+
+    @media screen and (max-width: 1028px){
+        padding: 16px 0;
+        height: auto;
+        .tournament-heading{
+            font-size: 16px; 
+            padding-bottom: 10px;
+        }
+        .card-container{
+            flex-wrap: wrap;
+        }
+        .tournament-card{
+            flex-basis: 52%;
+            margin: 11px auto;
+        }
+        .tournament-desc{
+            padding: 0;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .tournament-max-score{
+            font-size: 13px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px){
+        padding: 20px 0;
+    }
+}
+
+
+

@@ -1,0 +1,69 @@
+@import '../../assets/styles/color.scss';
+@import '../../assets/styles/font.scss';
+
+.results-ground-main{
+    color: $text-white;
+    width: 567px;
+    height: 100%;
+    display: flex;
+    padding: 40px;
+    margin: 0 auto;
+    min-height: 295px;
+    font-family: $Barlow-semi;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-top: 3%;
+    }
+    button.regular{
+        width: 134px;
+        background-color: $text-white;
+        color: $dark-text;
+        font-weight: 600;
+        font-size: 14px;
+        border: none;
+        &:hover{
+            color: $text-red;
+        }
+        &.quit{
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 767px){
+            width: 102px;
+            font-size: 10px;
+        }
+    }
+
+    .house-section{
+        margin-left: 36px;
+        @media screen and (max-width: 768px){
+            margin-left: 0;
+            order: 2;
+        }
+    }
+}
+
+.declare-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 768px){
+        order: 3;
+    }
+}
+
+.winner-name{
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 26px;
+
+    @media screen and (max-width: 768px){
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+}

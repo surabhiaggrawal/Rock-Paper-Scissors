@@ -1,0 +1,23 @@
+@import '../../assets/styles/font.scss';
+@import '../../assets/styles/color.scss';
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+
+    .rules{
+        font-family: $Barlow-semi;
+        padding-left: 20px;
+        text-align:left;
+        margin-top: 20px;
+        color: $text-grey;
+    }
+
+    @media screen and (max-width: 767px){
+        margin-top: 12%;
+        .rules{
+            margin-top: 8px;
+            font-size: 12px;
+        }
+    }
+}

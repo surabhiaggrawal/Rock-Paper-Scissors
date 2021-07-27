@@ -1,0 +1,40 @@
+@import '../../assets/styles/color.scss';
+
+.cockpit-main{
+    height: 100%;
+
+    .modal{
+        @media screen and (max-width: 767px){
+            text-align: center;
+        }
+        .modal-header-title{  
+            margin-left: 47px;
+            
+            @media screen and (max-width: 767px){
+                margin-left: 0;
+            }
+        }
+        .winner-modal-text{
+            color: $button-outline;
+            margin-top: 20px;
+        }
+        .close{
+            margin-top: -5px;
+        }
+        img{
+            height: 95px;
+            margin: 20px auto;
+            width: 95px;
+        }
+        .rps-button.regular{
+            width: 133px;
+            color: $primary-blue;
+            box-shadow: 2px 2px $button-outline;
+            transition: 0.2s all;
+            &:active{
+                transform: scale(0.98);
+                box-shadow: 1px 1px $button-outline;
+            }
+        }
+    }
+}
