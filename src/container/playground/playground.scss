@@ -1,73 +1,105 @@
-$image_path : '../../assets/images';
+@import '../../assets/styles/color.scss';
 
 .playground{
-    margin: 80px 37% 30px;
-    width: 32%;
-    height: 284px;
-    background-image: url(#{$image_path}/bg-triangle.svg);
-    background-repeat: no-repeat;
+    margin: 15vh auto;
+    width: 47vw;
 
-    @media screen and (min-width: 320px) and (max-width: 639px){
-        margin: 30% 18% 10%;
-        width: auto;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 240px;
-    }
-
-    @media screen and (min-width: 640px) and (max-width: 1028px){
-        background-image: none;
-    }
-}
-
-.box-top{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    @media screen and (max-width: 767px){
-        width: 66%;
-        left: 18%;
-        top: 39%;
-        position: absolute;
-    }
-
-    button{
-        &.paper{
-            margin-top: -20px;
-            margin-left: -30px;
-
-            @media screen and (max-width: 767px){
-                margin-top: 0;
-                margin-left: 0;
-            }
+    .box-top{
+        display: flex;
+        margin-top: 8%;
+    
+        .rps-button.circular.paper{
+            z-index: 2;
+            margin-right: -48px;
+            margin-left: 2%;
         }
-        &.scissors{
-            margin-top: -20px;
-            margin-right: 32px;
-
-            @media screen and (max-width: 767px){
-                margin-top: 0;
-                margin-right: 0;
-            }
-        } 
-    }
-}
-
-.box-bottom{
-    margin-top: 32px;
-    button{
-        margin-left: 75px;
-    }
-
-    @media screen and (max-width: 767px){
-        position: absolute;
-        top: 56%;
-        left: 19%;  
-        button{
-            margin-left: 63px;
+    
+        .rps-button.circular.scissors{
+            z-index: 2;
+            margin-left: -35px;
+        }
+    
+        .background-img-div{
+            width: 50%;
+            height: 3vh;
+            margin-top: 52px;
+            background-color: $background-slant-blue;
         }
     }
 
+    .background-img-slant-1{
+        width: 51vh;
+        background-color: $background-slant-blue;
+        transform: rotateZ(48deg);
+        height: 3vh;
+        margin-top: 20px;
+        z-index: 1;
+    }
+
+    .background-img-slant-2{
+        width: 51vh;
+        margin-left: 36%;
+        background-color: $background-slant-blue;
+        transform: rotateZ(-50deg);
+        height: 3vh;
+        z-index: 1;
+    }
+    
+    .box-bottom{
+        display: flex;
+        justify-content: center;
+        margin-right: 74px;
+        margin-top: -6px;
+
+        .rps-button.circular.rock{
+            z-index: 2;
+        }
+    }
+
+    @media  screen and  (max-width:1028px){
+        max-width: 240px;
+        width: 100%;
+
+        .box-top{
+            display: flex;
+            margin-top: 8%;
+        
+            .rps-button.circular.paper{
+                z-index: 2;
+                margin-right: -48px;
+                margin-left: 2%;
+            }
+        
+            .rps-button.circular.scissors{
+                z-index: 2;
+                margin-left: -4px;
+            }
+        
+            .background-img-div{
+                width: 50%;
+                height: 3vh;
+                margin-top: 6vh;
+                background-color: $background-slant-blue;
+            }
+        }
+
+        .box-bottom{
+            margin-right: 21px;
+        }
+
+        .background-img-slant-1{
+            width: 35vh;
+            transform: rotateZ(63deg);
+            margin-left: -25px;
+        }
+
+        .background-img-slant-2{
+            width: 35vh;
+            transform: rotateZ(-58deg);
+            margin-left: 20%;
+        }
+
+
+    }
 }
+
